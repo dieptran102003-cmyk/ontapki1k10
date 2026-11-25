@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Sơ đồ tư duy ôn tập Toán 10 – Học kì 1</title>
+<title>Tóm tắt lí thuyết Toán 10, kì I</title>
 <meta name="color-scheme" content="light dark">
 <style>
 :root{--bg:#f6f7fb;--card:#fff;--tx:#1b1f2a;--mut:#5b6475;--bd:#dde1ea;--ok:#15803d;--okb:#dcfce7;--bad:#b91c1c;--badb:#fee2e2;--rev:#1d4ed8;--revb:#dbeafe;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
@@ -52,7 +52,7 @@ body.m-home #kp,body.m-teacher #kp,body.pres #kp,body:not(.joined).m-group #kp{d
 </style>
 </head>
 <body>
-<header><h1>Sơ đồ tư duy ôn tập – Toán 10, Học kì 1</h1><p>Chọn một phòng, điền vào các ô trống để hoàn thiện sơ đồ tổng kết chương (SGK Kết nối tri thức, Tập 1).</p></header>
+<header><h1>Tóm tắt lí thuyết Toán 10, kì I</h1><p>Chọn một phòng, điền vào các ô trống để hoàn thiện sơ đồ tổng kết chương (SGK Kết nối tri thức, Tập 1).</p></header>
 <section id="home" class="panel"><h2>Bạn vào với vai trò nào?</h2><div class="cards"><button class="card" data-m="teacher"><b>👩‍🏫 Giáo viên</b><span>Tạo lớp, nhận bài của 5 nhóm, trình chiếu và sửa đáp án</span></button><button class="card" data-m="group"><b>👥 Nhóm học sinh</b><span>Vào phòng được giao, hoàn thiện sơ đồ, nộp bài</span></button><button class="card" data-m="free"><b>✏️ Tự luyện</b><span>Làm cả 5 phòng, tự kiểm tra đáp án</span></button></div></section>
 <section id="teacher" class="panel" hidden><h2>Giáo viên · Tạo lớp</h2>
 <div id="tsetup" class="row"><input id="tn" placeholder="Tên lớp (VD: 10A3)"><input id="tp" placeholder="Mật khẩu lớp"><input id="tm" type="number" value="10" min="1" style="width:80px"> phút <button class="b pri" id="tcreate">Tạo lớp</button></div>
@@ -80,36 +80,36 @@ body.m-home #kp,body.m-teacher #kp,body.pres #kp,body:not(.joined).m-group #kp{d
 <script>
 const R=[
 {n:"Mệnh đề và tập hợp",c:"#2563eb",b:[
-["Mệnh đề",["Mỗi mệnh đề chỉ có thể [[đúng|sai]] hoặc [[sai|đúng]], không thể vừa đúng vừa sai","Phủ định của mệnh đề P kí hiệu là P̄; P và P̄ có tính đúng sai [[trái ngược|ngược nhau]]","Mệnh đề chứa biến P(x): thay x bằng giá trị cụ thể thì trở thành một [[mệnh đề]]"]],
+["Mệnh đề",["Câu hỏi, câu cảm thán, câu cầu khiến [[không là|không phải là|không phải]] mệnh đề","Mỗi mệnh đề chỉ có thể [[đúng|sai]] hoặc [[sai|đúng]], không thể vừa đúng vừa sai","Phủ định của mệnh đề P kí hiệu là P̄; P và P̄ có tính đúng sai [[trái ngược|ngược nhau]]","Mệnh đề chứa biến P(x): thay x bằng giá trị cụ thể thì trở thành một [[mệnh đề]]"]],
 ["Kéo theo và tương đương",["P ⇒ Q chỉ sai khi P [[đúng]] và Q [[sai]]","Mệnh đề đảo của P ⇒ Q là [[Q ⇒ P]]","P ⇔ Q đúng khi cả P ⇒ Q và Q ⇒ P cùng [[đúng]]"]],
 ["Lượng từ ∀, ∃",["Kí hiệu ∀ đọc là [[với mọi]], kí hiệu ∃ đọc là [[tồn tại|có]]","Phủ định của “∀x, P(x)” là “[[∃|tồn tại]]x, P̄(x)”","Phủ định của “∃x, P(x)” là “[[∀|với mọi]]x, P̄(x)”"]],
 ["Tập hợp",["Tập hợp không có phần tử nào gọi là tập [[rỗng]], kí hiệu [[∅]]","A ⊂ B nếu mọi phần tử của A đều [[thuộc]] B","A = B khi A ⊂ B và B ⊂ [[A]]","Tập hợp có n phần tử thì có [[pow:2;n]] tập con"]],
 ["Các phép toán",["A ∩ B gồm các phần tử thuộc A [[và]] thuộc B","A ∪ B gồm các phần tử thuộc A [[hoặc]] thuộc B","A \\ B gồm các phần tử thuộc A nhưng [[không]] thuộc B","Nếu A ⊂ E thì phần bù của A trong E là [[E \\ A]]"]],
-["Các tập số",["ℕ ⊂ ℤ ⊂ [[ℚ|Q]] ⊂ ℝ","Khoảng (a; b) là tập các số x thỏa a [[<]] x < b","Đoạn [a; b] là tập các số x thỏa a ≤ x [[≤]] b"]]]},
+["Các tập số",["ℕ ⊂ ℤ ⊂ [[ℚ|Q]] ⊂ ℝ","Khoảng (a; b) là tập các số x thỏa a [[<]] x < b","Đoạn [a; b] là tập các số x thỏa a ≤ x [[≤]] b","Nửa khoảng [a; b) là tập các số x thỏa a [[≤]] x < b","Kí hiệu +∞ đọc là [[dương vô cùng|cộng vô cùng]], −∞ đọc là [[âm vô cùng|trừ vô cùng]]","Tập ℝ viết dưới dạng khoảng (−∞; [[+∞|∞]])"]]]},
 {n:"BPT và hệ BPT bậc nhất hai ẩn",c:"#c2410c",b:[
-["Khái niệm",["BPT bậc nhất hai ẩn có dạng ax + by ≤ c, với a, b [[không đồng thời bằng 0|không cùng bằng 0]]","Cặp số (x₀; y₀) thỏa BPT gọi là một [[nghiệm]] của BPT"]],
+["Khái niệm",["BPT bậc nhất hai ẩn có dạng ax + by ≤ c, với a, b [[không đồng thời bằng 0|không cùng bằng 0]]","Ngoài dạng ≤, BPT còn có các dạng ax + by [[g:<|>|≥]] c, ax + by [[g:<|>|≥]] c, ax + by [[g:<|>|≥]] c","Cặp số (x₀; y₀) thỏa BPT gọi là một [[nghiệm]] của BPT"]],
 ["Miền nghiệm",["Miền nghiệm của BPT là một [[nửa mặt phẳng]]","Đường thẳng ax + by = c gọi là [[bờ]] của miền nghiệm"]],
 ["Các bước biểu diễn miền nghiệm",["Bước 1: vẽ [[bờ|đường thẳng]] ax + by = c","Bước 2: lấy một điểm không nằm trên bờ (thường là [[O|gốc tọa độ|O(0;0)]] nếu c ≠ 0) rồi thay vào BPT","Bước 3: điểm đó thỏa BPT thì miền nghiệm [[chứa|có chứa]] điểm đó, ngược lại là nửa mặt phẳng [[không chứa|còn lại]] điểm đó"]],
 ["Nét liền hay nét đứt",["BPT ax + by < c (hoặc > c): bờ [[không]] thuộc miền nghiệm, vẽ bờ bằng nét [[đứt]]","BPT ax + by ≤ c (hoặc ≥ c): bờ [[thuộc|có thuộc]] miền nghiệm, vẽ bờ bằng nét [[liền]]"]],
 ["Hệ BPT",["Miền nghiệm của hệ là phần [[giao|chung]] các miền nghiệm của từng BPT","Miền nghiệm của hệ thường là một miền [[đa giác|đa giác lồi]]"]],
-["Ứng dụng",["F = ax + by đạt giá trị lớn nhất, nhỏ nhất tại một [[đỉnh]] của miền nghiệm","Bài toán thực tế: lập [[hệ BPT|hệ bất phương trình]] rồi tìm cực trị"]]]},
+["Ứng dụng",["F = ax + by đạt giá trị lớn nhất, nhỏ nhất tại một [[đỉnh]] của miền đa giác nghiệm","Bài toán thực tế: lập [[hệ BPT|hệ bất phương trình]] rồi tìm cực trị"]]]},
 {n:"Hệ thức lượng trong tam giác",c:"#15803d",b:[
+["Dấu của sin, cos",["Góc nhọn (0° < α < 90°): sinα [[>]] 0 và cosα [[>]] 0","Góc tù (90° < α < 180°): sinα [[>]] 0 và cosα [[<]] 0","Với 0° ≤ α ≤ 180°: sinα [[≥]] 0 (không âm)"]],
 ["Định lí côsin",["[[pow:a;2]] = b² + c² − 2bc·[[cosA|cos A]]","b² = a² + c² − 2ac·[[cosB|cos B]]","c² = a² + b² − 2ab·[[cosC|cos C]]"]],
 ["Hệ quả của định lí côsin",["cosA = [[fd:b² + c² − a²;2bc]]","cosB = [[fd:a² + c² − b²;2ac]]","cosC = [[fd:a² + b² − c²;2ab]]"]],
 ["Định lí sin",["{f:a|sinA} = {f:b|sinB} = {f:c|sinC} = [[2R]]","R là bán kính đường tròn [[ngoại tiếp]] tam giác","sinA = [[fd:a;2R]]"]],
 ["Diện tích tam giác",["S = ½·b·c·[[sinA|sin A]]  =  ½·a·c·[[sinB|sin B]]  =  ½·a·b·[[sinC|sin C]]","S = ½·a·[[hₐ|ha|h_a]] (hₐ là đường cao kẻ từ A)","S = [[pr]] (r là bán kính đường tròn nội tiếp)","S = [[fd:abc;4R]]","Công thức Heron: S = [[sqrt:p(p − a)(p − b)(p − c)]], với p = {f:a + b + c|2} là [[nửa chu vi]]"]],
-["Các trường hợp giải tam giác",["Biết 3 cạnh: dùng định lí [[côsin]] để tính các góc","Biết 2 cạnh và góc xen giữa: dùng định lí [[côsin]] tính cạnh còn lại, rồi dùng định lí [[sin|côsin]] tính góc","Biết 1 cạnh và 2 góc: góc thứ ba = [[180°|180]] − tổng hai góc, rồi dùng định lí [[sin]]"]],
-["Nhận biết dạng tam giác",["[[pow:a;2]] = [[pow:b|c;2]] + [[pow:c|b;2]] ⇔ tam giác ABC vuông tại [[A]]","Góc A nhọn ⇔ cosA [[>]] 0; góc A tù ⇔ cosA [[<]] 0","Trong tam giác, cạnh đối diện với góc lớn hơn thì [[lớn hơn|dài hơn]]"]]]},
+["Các trường hợp giải tam giác",["Biết 3 cạnh: dùng định lí [[côsin]] để tính các góc","Biết 2 cạnh và góc xen giữa: dùng định lí [[côsin]] tính cạnh còn lại, rồi dùng định lí [[sin|côsin]] tính góc","Biết 1 cạnh và 2 góc: góc thứ ba = [[180°|180]] − tổng hai góc, rồi dùng định lí [[sin]]"]]]},
 {n:"Vectơ",c:"#7e22ce",b:[
-["Khái niệm",["Vectơ có [[độ dài]] và [[hướng]]","Độ dài của {v:AB} bằng độ dài đoạn thẳng [[AB]]","Vectơ-không {v:0} có độ dài bằng [[0]]","Hai vectơ [[bằng nhau]] khi cùng hướng và cùng độ dài"]],
-["Tổng và hiệu",["Quy tắc ba điểm: {v:AB} + {v:BC} = [[vec:AC]]","Quy tắc hình bình hành ABCD: {v:AB} + {v:AD} = [[vec:AC]]","Quy tắc hiệu: {v:OA} − {v:OB} = [[vec:BA]]","Vectơ đối của {v:AB} là [[vec:BA]]"]],
+["Khái niệm",["Vectơ là một đoạn thẳng [[có hướng]]","Độ dài của {v:AB} bằng độ dài đoạn thẳng [[AB]]","Vectơ-không {v:0} có độ dài bằng [[0]]","Hai vectơ [[bằng nhau]] khi cùng hướng và cùng độ dài","Hai vectơ đối nhau khi [[ngược|trái]] hướng và cùng độ dài"]],
+["Tổng và hiệu",["Quy tắc ba điểm: {v:AB} + {v:BC} = [[vec:AC]]","Quy tắc hình bình hành ABCD: {v:AB} + {v:AD} = [[vec:AC]]","Quy tắc hiệu: {v:OA} − {v:OB} = [[vec:BA]]","Vectơ đối của {v:AB} là [[vec:BA|-AB]]"]],
 ["Tích với một số",["{v:a} và {v:b} cùng phương ({v:a} ≠ {v:0}) ⇔ {v:b} = [[k]]·{v:a}","I là trung điểm AB: {v:IA} + {v:IB} = [[vec:0]]","G là trọng tâm tam giác ABC: {v:GA} + {v:GB} + {v:GC} = [[vec:0]]"]],
 ["Tích vô hướng",["{v:a}·{v:b} = |{v:a}|·|{v:b}|·[[cos]]({v:a}, {v:b})","{v:a} ⊥ {v:b} ⇔ {v:a}·{v:b} = [[0]]","Tích vô hướng của hai vectơ là một [[số|số thực]], không phải vectơ"]],
-["Tọa độ vectơ",["A(x₁; y₁), B(x₂; y₂): {v:AB} = ([[x₂ − x₁]]; [[y₂ − y₁]])","{v:a} = (x; y): |{v:a}| = [[sqrt:x² + y²|y² + x²]]","M là trung điểm AB: xₘ = [[frac:x₁ + x₂;2]]","G là trọng tâm tam giác ABC: x_G = [[frac:x₁ + x₂ + x₃;3]]"]],
-["Biểu thức tọa độ",["{v:a} = (x₁; y₁), {v:b} = (x₂; y₂): {v:a}·{v:b} = x₁x₂ + [[y₁y₂]]","{v:a} ⊥ {v:b} ⇔ x₁x₂ + y₁y₂ = [[0]]","{v:a} cùng phương {v:b} ⇔ x₁y₂ − x₂y₁ = [[0]]"]]]},
+["Tọa độ vectơ",["Cho A(x₁; y₁), B(x₂; y₂), C(x₃; y₃)","{v:AB} = ([[x₂ − x₁]]; [[y₂ − y₁]])","Cho {v:a} = (x; y): |{v:a}| = [[sqrt:x² + y²|y² + x²]]","M là trung điểm AB: M ([[fd:x₁ + x₂;2]]; [[fd:y₁ + y₂;2]])","G là trọng tâm tam giác ABC: G ([[fd:x₁ + x₂ + x₃;3]]; [[fd:y₁ + y₂ + y₃;3]])"]],
+["Biểu thức tọa độ",["Cho {v:a} = (x₁; y₁), {v:b} = (x₂; y₂)","{v:a}·{v:b} = x₁x₂ + [[y₁y₂]]","{v:a} ⊥ {v:b} ⇔ x₁x₂ + y₁y₂ = [[0]]","{v:a} cùng phương {v:b} ⇔ x₁y₂ − x₂y₁ = [[0]]"]]]},
 {n:"Số đặc trưng của mẫu số liệu",c:"#be123c",b:[
-["Đo xu thế trung tâm",["Số trung bình = tổng các giá trị chia cho [[số giá trị|cỡ mẫu|n]]","Trung vị: sắp xếp mẫu [[tăng dần]] rồi lấy giá trị chính giữa","Mốt là giá trị xuất hiện [[nhiều nhất]]"]],
-["Trung vị và tứ phân vị",["n lẻ: trung vị là số ở [[giữa|chính giữa]]; n chẵn: trung vị là [[trung bình cộng|TBC]] của hai số ở giữa","Q₂ chính là [[trung vị]]","Q₁ là trung vị của nửa [[dưới|trái|nhỏ]] mẫu; Q₃ là trung vị của nửa [[trên|phải|lớn]] mẫu"]],
+["Đo xu thế trung tâm",["Số trung bình = tổng các giá trị chia cho [[số giá trị|cỡ mẫu|n]]","Trung vị: sắp xếp mẫu số liệu theo thứ tự [[không giảm|không tăng]] rồi lấy giá trị chính giữa","Mốt là giá trị xuất hiện [[nhiều nhất]]"]],
+["Trung vị và tứ phân vị",["n lẻ: trung vị là số ở [[chính giữa]]; n chẵn: trung vị là [[trung bình cộng|TBC]] của hai số ở giữa","Q₂ chính là [[trung vị]]","Q₁ là trung vị của nửa [[dưới|trái|nhỏ]] mẫu; Q₃ là trung vị của nửa [[trên|phải|lớn]] mẫu"]],
 ["Đo độ phân tán",["Khoảng biến thiên R = lớn nhất − [[nhỏ nhất|giá trị nhỏ nhất]]","Khoảng tứ phân vị ΔQ = Q₃ − [[Q₁]]","Độ lệch chuẩn s là căn bậc hai của [[phương sai]]"]],
 ["Giá trị ngoại lệ",["x là ngoại lệ nếu x < Q₁ − [[1,5ΔQ]] hoặc x > Q₃ + [[1,5ΔQ]]"]],
 ["Công thức số trung bình, phương sai",["x̄ = [[fd:x₁ + x₂ + … + xₙ;n]]","s² = [[fd:(x₁ − x̄)² + (x₂ − x̄)² + … + (xₙ − x̄)²;n]]"]],
@@ -118,15 +118,15 @@ const R=[
 const SB={"₀":"0","₁":"1","₂":"2","₃":"3","ₙ":"n"};const norm=s=>s.toLowerCase().replace(/vectơ|vecto/g,"").replace(/[\s·*⃗→\u0304]/g,"").replace(/,/g,".").replace(/[₀-₃ₙ]/g,c=>SB[c]).replace(/-/g,"−").replace(/\^2/g,"²").replace(/\^3/g,"³");
 const esc=s=>s.replace(/&/g,"&amp;").replace(/</g,"&lt;");
 const at=s=>esc(s).replace(/"/g,"&quot;");
-const inp=(a,w)=>'<input class="bl" data-a="'+at(a)+'" data-s="'+(w||Math.max(4,a.split("|")[0].length+1))+'" size="'+(w||Math.max(4,a.split("|")[0].length+1))+'" autocomplete="off" spellcheck="false" aria-label="ô trống">';
+const inp=(a,w,g)=>'<input class="bl"'+(g?' data-g="'+g+'"':'')+' data-a="'+at(a)+'" data-s="'+(w||Math.max(4,a.split("|")[0].length+1))+'" size="'+(w||Math.max(4,a.split("|")[0].length+1))+'" autocomplete="off" spellcheck="false" aria-label="ô trống">';
 const rich=s=>esc(s).replace(/\{v:(.+?)\}/g,'<span class="vc">$1</span>').replace(/\{f:(.+?)\|(.+?)\}/g,'<span class="fr"><span>$1</span><span>$2</span></span>');
-function blank(p){const m=p.match(/^(pow|frac|fd|sqrt|vec):(.*)$/);if(!m)return inp(p);const t=m[1],q=m[2].split(";");
+function blank(p,g){const m=p.match(/^(pow|frac|fd|sqrt|vec):(.*)$/);if(!m)return p.startsWith("g:")?inp(p.slice(2),0,g):inp(p);const t=m[1],q=m[2].split(";");
  if(t=="pow")return '<span class="pw">'+inp(q[0],3)+'<span class="e">'+inp(q[1],2)+'</span></span>';
  if(t=="frac")return '<span class="fr"><span>'+inp(q[0],9)+'</span><span>'+inp(q[1],4)+'</span></span>';
  if(t=="fd")return '<span class="fr"><span>'+rich(q[0])+'</span><span>'+inp(q[1],4)+'</span></span>';
  if(t=="sqrt")return '√<span class="rt">'+inp(q[0],9)+'</span>';
  return '<span class="vi">'+inp(q[0],3)+'</span>'}
-const rd=it=>it.split(/\[\[(.+?)\]\]/).map((p,k)=>k%2?blank(p):rich(p)).join("");
+let GC=0;const rd=it=>{const g="g"+(++GC);return it.split(/\[\[(.+?)\]\]/).map((p,k)=>k%2?blank(p,g):rich(p)).join("")};
 const tabs=document.getElementById("tabs"),rooms=document.getElementById("rooms");
 R.forEach((r,i)=>{
  const t=document.createElement("button");t.className="tab";t.style.setProperty("--c",r.c);t.textContent="Phòng "+(i+1)+" · Chương "+(i+1);t.onclick=()=>go(i);tabs.appendChild(t);
@@ -139,9 +139,9 @@ R.forEach((r,i)=>{
 let cur=0;
 const cells=()=>[...rooms.children[cur].querySelectorAll("input.bl")];
 function go(i){cur=(i+R.length)%R.length;[...tabs.children].forEach((t,k)=>t.classList.toggle("on",k==cur));[...rooms.children].forEach((s,k)=>s.classList.toggle("on",k==cur));document.getElementById("score").textContent="";scrollTo(0,0)}
-function check(){let ok=0;const c=cells();c.forEach(x=>{x.classList.remove("ok","bad","rev");if(!x.value.trim())return;const good=x.dataset.a.split("|").some(a=>norm(a)==norm(x.value));x.classList.add(good?"ok":"bad");if(good)ok++});document.getElementById("score").textContent="Đúng "+ok+"/"+c.length+" ô"}
+function check(){let ok=0;const c=cells(),seen={};c.forEach(x=>{x.classList.remove("ok","bad","rev");if(!x.value.trim())return;let good=x.dataset.a.split("|").some(a=>norm(a)==norm(x.value));if(good&&x.dataset.g){const k=x.dataset.g+norm(x.value);if(seen[k])good=false;else seen[k]=1}x.classList.add(good?"ok":"bad");if(good)ok++});document.getElementById("score").textContent="Đúng "+ok+"/"+c.length+" ô"}
 document.getElementById("chk").onclick=check;
-document.getElementById("rvl").onclick=()=>{cells().forEach(x=>{x.value=x.dataset.a.split("|")[0];x.classList.remove("ok","bad");x.classList.add("rev")});document.getElementById("score").textContent="Đã hiện đáp án"};
+document.getElementById("rvl").onclick=()=>{const gc={};cells().forEach(x=>{const o=x.dataset.a.split("|");let v=o[0];if(x.dataset.g){const n=gc[x.dataset.g]||0;gc[x.dataset.g]=n+1;v=o[n]||o[0]}x.value=v;x.classList.remove("ok","bad");x.classList.add("rev")});document.getElementById("score").textContent="Đã hiện đáp án"};
 document.getElementById("rst").onclick=()=>{cells().forEach(x=>{x.value="";x.classList.remove("ok","bad","rev")});document.getElementById("score").textContent=""};
 document.getElementById("prv").onclick=()=>go(cur-1);
 document.getElementById("nxt").onclick=()=>go(cur+1);
