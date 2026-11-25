@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sơ đồ tư duy ôn tập Toán 10 – Học kì 1</title>
+<meta name="color-scheme" content="light dark">
+<style>
+:root{--bg:#f6f7fb;--card:#fff;--tx:#1b1f2a;--mut:#5b6475;--bd:#dde1ea;--ok:#15803d;--okb:#dcfce7;--bad:#b91c1c;--badb:#fee2e2;--rev:#1d4ed8;--revb:#dbeafe;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#12141a;--card:#1c1f28;--tx:#eceef4;--mut:#9aa3b5;--bd:#303544;--ok:#4ade80;--okb:#14351f;--bad:#f87171;--badb:#3d1717;--rev:#93c5fd;--revb:#172a4a}}
+:root[data-theme="dark"]{--bg:#12141a;--card:#1c1f28;--tx:#eceef4;--mut:#9aa3b5;--bd:#303544;--ok:#4ade80;--okb:#14351f;--bad:#f87171;--badb:#3d1717;--rev:#93c5fd;--revb:#172a4a}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.55 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+header{padding:16px 20px 8px;max-width:1200px;margin:auto}
+h1{font-size:1.35rem;margin:0 0 2px}header p{margin:0;color:var(--mut);font-size:.9rem}
+.tabs{display:flex;gap:8px;padding:8px 20px;max-width:1200px;margin:auto;overflow-x:auto}
+.tab{flex:0 0 auto;border:1px solid var(--bd);background:var(--card);color:var(--tx);border-radius:999px;padding:8px 14px;cursor:pointer;font:inherit;font-size:.9rem}
+.tab.on{color:#fff;border-color:transparent;background:var(--c)}
+.bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;max-width:1200px;margin:auto;padding:4px 20px 12px}
+.bar .sp{flex:1}
+button.b{border:1px solid var(--bd);background:var(--card);color:var(--tx);border-radius:8px;padding:8px 14px;font:inherit;font-size:.9rem;cursor:pointer}
+button.b.pri{background:#2563eb;color:#fff;border-color:transparent}
+#score{font-weight:600;color:var(--mut);font-size:.9rem}
+main{max-width:1200px;margin:auto;padding:0 20px 40px}
+.room{display:none}.room.on{display:block}
+.center{display:block;width:fit-content;max-width:100%;margin:6px auto 0;text-align:center;background:var(--c);color:#fff;font-weight:700;font-size:1.25rem;padding:14px 28px;border-radius:999px}
+.stem{width:2px;height:22px;background:var(--c);margin:0 auto}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;border-top:2px solid var(--c);padding-top:18px}
+.br{background:var(--card);border:1px solid var(--bd);border-top:5px solid var(--c);border-radius:12px;padding:12px 14px}
+.br h3{margin:0 0 8px;font-size:1rem;color:var(--c)}
+.br ul{list-style:none;margin:0;padding:0;display:grid;gap:8px}
+.br li{padding-left:14px;position:relative;font-size:.95rem}
+.br li::before{content:"";position:absolute;left:0;top:.62em;width:6px;height:6px;border-radius:50%;background:var(--c)}
+input.bl{font:inherit;text-align:center;border:0;border-bottom:2px dashed var(--c);background:transparent;color:var(--tx);padding:0 4px;margin:0 2px;border-radius:4px 4px 0 0;min-width:56px}
+input.bl:focus{outline:none;background:var(--revb)}
+input.ok{background:var(--okb);border-bottom:2px solid var(--ok);color:var(--ok);font-weight:600}
+input.bad{background:var(--badb);border-bottom:2px solid var(--bad);color:var(--bad)}
+input.rev{background:var(--revb);border-bottom:2px solid var(--rev);color:var(--rev);font-weight:600}
+body.pres{font-size:21px}body.pres header p,body.pres .hint{display:none}
+body.pres .grid{grid-template-columns:repeat(auto-fit,minmax(340px,1fr))}
+.hint{max-width:1200px;margin:auto;padding:0 20px 8px;color:var(--mut);font-size:.82rem}
+.panel{max-width:1200px;margin:8px auto;padding:12px 20px}.panel h2{margin:0 0 8px;font-size:1.15rem}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px}.card{text-align:left;border:1px solid var(--bd);background:var(--card);color:var(--tx);border-radius:12px;padding:16px;font:inherit;cursor:pointer;display:grid;gap:4px}.card span{color:var(--mut);font-size:.9rem}.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:8px 0}.row input,.panel select,.panel textarea{font:inherit;padding:8px 10px;border:1px solid var(--bd);border-radius:8px;background:var(--card);color:var(--tx)}.panel textarea{width:100%;min-height:70px}#clock{font-size:2rem;font-weight:700;font-variant-numeric:tabular-nums}table{border-collapse:collapse;width:100%;margin:8px 0}td,th{border-bottom:1px solid var(--bd);padding:6px 8px;text-align:left;font-size:.92rem}.small{color:var(--mut);font-size:.85rem;margin:4px 0}
+[hidden]{display:none!important}body.m-home .tabs,body.m-home .bar,body.m-home .hint,body.m-home main,body.m-group .tabs,body.m-group .bar,body.m-group .hint,body:not(.joined).m-group main,body.pres .panel{display:none}
+.vc{position:relative;display:inline-block}.vc::before{content:"→";position:absolute;left:0;right:0;top:-.78em;text-align:center;font-size:.72em;line-height:1}
+.vi{position:relative;display:inline-block;margin-top:.5em}.vi::before{content:"→";position:absolute;left:0;right:0;top:-.85em;text-align:center;font-size:.8em;line-height:1;color:var(--c)}
+.fr{display:inline-flex;flex-direction:column;vertical-align:middle;text-align:center;margin:0 3px}.fr>span:first-child{border-bottom:1.5px solid currentColor;padding:0 4px}.fr>span:last-child{padding:0 4px}
+.rt{border-top:1.5px solid currentColor;padding:0 3px;margin-left:1px}
+.pw{display:inline-flex;align-items:flex-start}.pw .e{margin-top:-.55em}.pw .e input.bl{font-size:.78em;min-width:22px}.pw>input.bl,.fr input.bl,.rt input.bl{min-width:28px}
+.br li{line-height:2}.br ul{gap:10px}
+#kp{position:fixed;left:0;right:0;bottom:0;display:flex;gap:4px;overflow-x:auto;padding:6px 10px calc(6px + env(safe-area-inset-bottom,0px));background:var(--card);border-top:1px solid var(--bd);z-index:20}#kp button{flex:0 0 auto;min-width:38px;height:38px;border:1px solid var(--bd);background:var(--bg);color:var(--tx);border-radius:8px;font:inherit;font-size:1.05rem;cursor:pointer}
+body.m-home #kp,body.m-teacher #kp,body.pres #kp,body:not(.joined).m-group #kp{display:none}main{padding-bottom:70px}
+</style>
+</head>
+<body>
+<header><h1>Sơ đồ tư duy ôn tập – Toán 10, Học kì 1</h1><p>Chọn một phòng, điền vào các ô trống để hoàn thiện sơ đồ tổng kết chương (SGK Kết nối tri thức, Tập 1).</p></header>
+<section id="home" class="panel"><h2>Bạn vào với vai trò nào?</h2><div class="cards"><button class="card" data-m="teacher"><b>👩‍🏫 Giáo viên</b><span>Tạo lớp, nhận bài của 5 nhóm, trình chiếu và sửa đáp án</span></button><button class="card" data-m="group"><b>👥 Nhóm học sinh</b><span>Vào phòng được giao, hoàn thiện sơ đồ, nộp bài</span></button><button class="card" data-m="free"><b>✏️ Tự luyện</b><span>Làm cả 5 phòng, tự kiểm tra đáp án</span></button></div></section>
+<section id="teacher" class="panel" hidden><h2>Giáo viên · Tạo lớp</h2>
+<div id="tsetup" class="row"><input id="tn" placeholder="Tên lớp (VD: 10A3)"><input id="tp" placeholder="Mật khẩu lớp"><input id="tm" type="number" value="10" min="1" style="width:80px"> phút <button class="b pri" id="tcreate">Tạo lớp</button></div>
+<div id="tmain" hidden><p id="tinfo"></p><div class="row"><span id="clock">10:00</span><button class="b" id="tstart">▶ Bắt đầu tính giờ</button></div>
+<p class="small">Khi các nhóm gửi mã bài nộp (qua Zalo, nhóm lớp…), dán mã vào ô dưới (mỗi mã một dòng) rồi bấm “Thêm bài”.</p><textarea id="tin" placeholder="TD10-..."></textarea><div class="row"><button class="b pri" id="tadd">Thêm bài</button><span id="tmsg" class="small"></span></div>
+<table id="tlist"></table></div><button class="b" data-home>← Trang chủ</button></section>
+<section id="group" class="panel" hidden><h2>Nhóm học sinh</h2>
+<div id="gsetup" class="row"><input id="gp" placeholder="Mật khẩu lớp"><input id="gn" placeholder="Tên nhóm"><select id="gr"></select><button class="b pri" id="gstart">Vào phòng</button><span id="gmsg0" class="small"></span></div>
+<div id="gmain" hidden><div class="row"><b id="ginfo"></b><button class="b" id="gsave">💾 Lưu nháp</button><button class="b pri" id="gsub">📤 Nộp bài</button><span id="gmsg" class="small"></span></div>
+<div id="gbox" hidden><p class="small">Sao chép mã này gửi cho giáo viên. Có thể sửa rồi nộp lại, giáo viên sẽ dùng mã mới nhất.</p><textarea id="gout" readonly></textarea><button class="b" id="gcopy">Sao chép mã</button></div></div>
+<button class="b" data-home>← Trang chủ</button></section>
+<nav class="tabs" id="tabs"></nav>
+<div class="bar">
+<button class="b pri" id="chk">Kiểm tra</button>
+<button class="b" id="rvl">Hiện đáp án</button>
+<button class="b" id="rst">Làm lại</button>
+<span id="score"></span><span class="sp"></span>
+<button class="b" id="prv">◀ Chương trước</button>
+<button class="b" id="nxt">Chương sau ▶</button>
+<button class="b" id="pre">⛶ Trình chiếu</button>
+</div>
+<div class="hint">Gõ nhanh: <b>^2</b> → ², <b>sqrt</b> → √, <b>&lt;=</b> → ≤, <b>&gt;=</b> → ≥, <b>!=</b> → ≠, <b>=&gt;</b> → ⇒, <b>&lt;=&gt;</b> → ⇔; hoặc bấm ký hiệu ở thanh dưới màn hình. Ô có dạng mũ, phân số, căn, vectơ đã dựng sẵn khung, chỉ cần điền vào. GV: “Trình chiếu” để phóng to, phím ← → đổi phòng.</div>
+<main id="rooms"></main>
+<div id="kp" aria-label="Thanh ký hiệu toán"></div>
+<script>
+const R=[
+{n:"Mệnh đề và tập hợp",c:"#2563eb",b:[
+["Mệnh đề",["Mỗi mệnh đề chỉ có thể [[đúng|sai]] hoặc [[sai|đúng]], không thể vừa đúng vừa sai","Phủ định của mệnh đề P kí hiệu là P̄; P và P̄ có tính đúng sai [[trái ngược|ngược nhau]]","Mệnh đề chứa biến P(x): thay x bằng giá trị cụ thể thì trở thành một [[mệnh đề]]"]],
+["Kéo theo và tương đương",["P ⇒ Q chỉ sai khi P [[đúng]] và Q [[sai]]","Mệnh đề đảo của P ⇒ Q là [[Q ⇒ P]]","P ⇔ Q đúng khi cả P ⇒ Q và Q ⇒ P cùng [[đúng]]"]],
+["Lượng từ ∀, ∃",["Kí hiệu ∀ đọc là [[với mọi]], kí hiệu ∃ đọc là [[tồn tại|có]]","Phủ định của “∀x, P(x)” là “[[∃|tồn tại]]x, P̄(x)”","Phủ định của “∃x, P(x)” là “[[∀|với mọi]]x, P̄(x)”"]],
+["Tập hợp",["Tập hợp không có phần tử nào gọi là tập [[rỗng]], kí hiệu [[∅]]","A ⊂ B nếu mọi phần tử của A đều [[thuộc]] B","A = B khi A ⊂ B và B ⊂ [[A]]","Tập hợp có n phần tử thì có [[pow:2;n]] tập con"]],
+["Các phép toán",["A ∩ B gồm các phần tử thuộc A [[và]] thuộc B","A ∪ B gồm các phần tử thuộc A [[hoặc]] thuộc B","A \\ B gồm các phần tử thuộc A nhưng [[không]] thuộc B","Nếu A ⊂ E thì phần bù của A trong E là [[E \\ A]]"]],
+["Các tập số",["ℕ ⊂ ℤ ⊂ [[ℚ|Q]] ⊂ ℝ","Khoảng (a; b) là tập các số x thỏa a [[<]] x < b","Đoạn [a; b] là tập các số x thỏa a ≤ x [[≤]] b"]]]},
+{n:"BPT và hệ BPT bậc nhất hai ẩn",c:"#c2410c",b:[
+["Khái niệm",["BPT bậc nhất hai ẩn có dạng ax + by ≤ c, với a, b [[không đồng thời bằng 0|không cùng bằng 0]]","Cặp số (x₀; y₀) thỏa BPT gọi là một [[nghiệm]] của BPT"]],
+["Miền nghiệm",["Miền nghiệm của BPT là một [[nửa mặt phẳng]]","Đường thẳng ax + by = c gọi là [[bờ]] của miền nghiệm"]],
+["Các bước biểu diễn miền nghiệm",["Bước 1: vẽ [[bờ|đường thẳng]] ax + by = c","Bước 2: lấy một điểm không nằm trên bờ (thường là [[O|gốc tọa độ|O(0;0)]] nếu c ≠ 0) rồi thay vào BPT","Bước 3: điểm đó thỏa BPT thì miền nghiệm [[chứa|có chứa]] điểm đó, ngược lại là nửa mặt phẳng [[không chứa|còn lại]] điểm đó"]],
+["Nét liền hay nét đứt",["BPT ax + by < c (hoặc > c): bờ [[không]] thuộc miền nghiệm, vẽ bờ bằng nét [[đứt]]","BPT ax + by ≤ c (hoặc ≥ c): bờ [[thuộc|có thuộc]] miền nghiệm, vẽ bờ bằng nét [[liền]]"]],
+["Hệ BPT",["Miền nghiệm của hệ là phần [[giao|chung]] các miền nghiệm của từng BPT","Miền nghiệm của hệ thường là một miền [[đa giác|đa giác lồi]]"]],
+["Ứng dụng",["F = ax + by đạt giá trị lớn nhất, nhỏ nhất tại một [[đỉnh]] của miền nghiệm","Bài toán thực tế: lập [[hệ BPT|hệ bất phương trình]] rồi tìm cực trị"]]]},
+{n:"Hệ thức lượng trong tam giác",c:"#15803d",b:[
+["Định lí côsin",["[[pow:a;2]] = b² + c² − 2bc·[[cosA|cos A]]","b² = a² + c² − 2ac·[[cosB|cos B]]","c² = a² + b² − 2ab·[[cosC|cos C]]"]],
+["Hệ quả của định lí côsin",["cosA = [[fd:b² + c² − a²;2bc]]","cosB = [[fd:a² + c² − b²;2ac]]","cosC = [[fd:a² + b² − c²;2ab]]"]],
+["Định lí sin",["{f:a|sinA} = {f:b|sinB} = {f:c|sinC} = [[2R]]","R là bán kính đường tròn [[ngoại tiếp]] tam giác","sinA = [[fd:a;2R]]"]],
+["Diện tích tam giác",["S = ½·b·c·[[sinA|sin A]]  =  ½·a·c·[[sinB|sin B]]  =  ½·a·b·[[sinC|sin C]]","S = ½·a·[[hₐ|ha|h_a]] (hₐ là đường cao kẻ từ A)","S = [[pr]] (r là bán kính đường tròn nội tiếp)","S = [[fd:abc;4R]]","Công thức Heron: S = [[sqrt:p(p − a)(p − b)(p − c)]], với p = {f:a + b + c|2} là [[nửa chu vi]]"]],
+["Các trường hợp giải tam giác",["Biết 3 cạnh: dùng định lí [[côsin]] để tính các góc","Biết 2 cạnh và góc xen giữa: dùng định lí [[côsin]] tính cạnh còn lại, rồi dùng định lí [[sin|côsin]] tính góc","Biết 1 cạnh và 2 góc: góc thứ ba = [[180°|180]] − tổng hai góc, rồi dùng định lí [[sin]]"]],
+["Nhận biết dạng tam giác",["[[pow:a;2]] = [[pow:b|c;2]] + [[pow:c|b;2]] ⇔ tam giác ABC vuông tại [[A]]","Góc A nhọn ⇔ cosA [[>]] 0; góc A tù ⇔ cosA [[<]] 0","Trong tam giác, cạnh đối diện với góc lớn hơn thì [[lớn hơn|dài hơn]]"]]]},
+{n:"Vectơ",c:"#7e22ce",b:[
+["Khái niệm",["Vectơ có [[độ dài]] và [[hướng]]","Độ dài của {v:AB} bằng độ dài đoạn thẳng [[AB]]","Vectơ-không {v:0} có độ dài bằng [[0]]","Hai vectơ [[bằng nhau]] khi cùng hướng và cùng độ dài"]],
+["Tổng và hiệu",["Quy tắc ba điểm: {v:AB} + {v:BC} = [[vec:AC]]","Quy tắc hình bình hành ABCD: {v:AB} + {v:AD} = [[vec:AC]]","Quy tắc hiệu: {v:OA} − {v:OB} = [[vec:BA]]","Vectơ đối của {v:AB} là [[vec:BA]]"]],
+["Tích với một số",["{v:a} và {v:b} cùng phương ({v:a} ≠ {v:0}) ⇔ {v:b} = [[k]]·{v:a}","I là trung điểm AB: {v:IA} + {v:IB} = [[vec:0]]","G là trọng tâm tam giác ABC: {v:GA} + {v:GB} + {v:GC} = [[vec:0]]"]],
+["Tích vô hướng",["{v:a}·{v:b} = |{v:a}|·|{v:b}|·[[cos]]({v:a}, {v:b})","{v:a} ⊥ {v:b} ⇔ {v:a}·{v:b} = [[0]]","Tích vô hướng của hai vectơ là một [[số|số thực]], không phải vectơ"]],
+["Tọa độ vectơ",["A(x₁; y₁), B(x₂; y₂): {v:AB} = ([[x₂ − x₁]]; [[y₂ − y₁]])","{v:a} = (x; y): |{v:a}| = [[sqrt:x² + y²|y² + x²]]","M là trung điểm AB: xₘ = [[frac:x₁ + x₂;2]]","G là trọng tâm tam giác ABC: x_G = [[frac:x₁ + x₂ + x₃;3]]"]],
+["Biểu thức tọa độ",["{v:a} = (x₁; y₁), {v:b} = (x₂; y₂): {v:a}·{v:b} = x₁x₂ + [[y₁y₂]]","{v:a} ⊥ {v:b} ⇔ x₁x₂ + y₁y₂ = [[0]]","{v:a} cùng phương {v:b} ⇔ x₁y₂ − x₂y₁ = [[0]]"]]]},
+{n:"Số đặc trưng của mẫu số liệu",c:"#be123c",b:[
+["Đo xu thế trung tâm",["Số trung bình = tổng các giá trị chia cho [[số giá trị|cỡ mẫu|n]]","Trung vị: sắp xếp mẫu [[tăng dần]] rồi lấy giá trị chính giữa","Mốt là giá trị xuất hiện [[nhiều nhất]]"]],
+["Trung vị và tứ phân vị",["n lẻ: trung vị là số ở [[giữa|chính giữa]]; n chẵn: trung vị là [[trung bình cộng|TBC]] của hai số ở giữa","Q₂ chính là [[trung vị]]","Q₁ là trung vị của nửa [[dưới|trái|nhỏ]] mẫu; Q₃ là trung vị của nửa [[trên|phải|lớn]] mẫu"]],
+["Đo độ phân tán",["Khoảng biến thiên R = lớn nhất − [[nhỏ nhất|giá trị nhỏ nhất]]","Khoảng tứ phân vị ΔQ = Q₃ − [[Q₁]]","Độ lệch chuẩn s là căn bậc hai của [[phương sai]]"]],
+["Giá trị ngoại lệ",["x là ngoại lệ nếu x < Q₁ − [[1,5ΔQ]] hoặc x > Q₃ + [[1,5ΔQ]]"]],
+["Công thức số trung bình, phương sai",["x̄ = [[fd:x₁ + x₂ + … + xₙ;n]]","s² = [[fd:(x₁ − x̄)² + (x₂ − x̄)² + … + (xₙ − x̄)²;n]]"]],
+["Chọn số đặc trưng phù hợp",["Mẫu có giá trị ngoại lệ: nên dùng [[trung vị|tứ phân vị]] thay cho số trung bình","Độ lệch chuẩn càng lớn thì dữ liệu càng [[phân tán|rải rộng]]","So sánh độ phân tán của hai mẫu cùng đơn vị: mẫu có [[độ lệch chuẩn|phương sai]] lớn hơn thì phân tán hơn"]]]}
+];
+const SB={"₀":"0","₁":"1","₂":"2","₃":"3","ₙ":"n"};const norm=s=>s.toLowerCase().replace(/vectơ|vecto/g,"").replace(/[\s·*⃗→\u0304]/g,"").replace(/,/g,".").replace(/[₀-₃ₙ]/g,c=>SB[c]).replace(/-/g,"−").replace(/\^2/g,"²").replace(/\^3/g,"³");
+const esc=s=>s.replace(/&/g,"&amp;").replace(/</g,"&lt;");
+const at=s=>esc(s).replace(/"/g,"&quot;");
+const inp=(a,w)=>'<input class="bl" data-a="'+at(a)+'" data-s="'+(w||Math.max(4,a.split("|")[0].length+1))+'" size="'+(w||Math.max(4,a.split("|")[0].length+1))+'" autocomplete="off" spellcheck="false" aria-label="ô trống">';
+const rich=s=>esc(s).replace(/\{v:(.+?)\}/g,'<span class="vc">$1</span>').replace(/\{f:(.+?)\|(.+?)\}/g,'<span class="fr"><span>$1</span><span>$2</span></span>');
+function blank(p){const m=p.match(/^(pow|frac|fd|sqrt|vec):(.*)$/);if(!m)return inp(p);const t=m[1],q=m[2].split(";");
+ if(t=="pow")return '<span class="pw">'+inp(q[0],3)+'<span class="e">'+inp(q[1],2)+'</span></span>';
+ if(t=="frac")return '<span class="fr"><span>'+inp(q[0],9)+'</span><span>'+inp(q[1],4)+'</span></span>';
+ if(t=="fd")return '<span class="fr"><span>'+rich(q[0])+'</span><span>'+inp(q[1],4)+'</span></span>';
+ if(t=="sqrt")return '√<span class="rt">'+inp(q[0],9)+'</span>';
+ return '<span class="vi">'+inp(q[0],3)+'</span>'}
+const rd=it=>it.split(/\[\[(.+?)\]\]/).map((p,k)=>k%2?blank(p):rich(p)).join("");
+const tabs=document.getElementById("tabs"),rooms=document.getElementById("rooms");
+R.forEach((r,i)=>{
+ const t=document.createElement("button");t.className="tab";t.style.setProperty("--c",r.c);t.textContent="Phòng "+(i+1)+" · Chương "+(i+1);t.onclick=()=>go(i);tabs.appendChild(t);
+ const s=document.createElement("section");s.className="room";s.style.setProperty("--c",r.c);
+ let h='<span class="center">Chương '+(i+1)+': '+esc(r.n)+'</span><div class="stem"></div><div class="grid">';
+ r.b.forEach(([t,items])=>{h+='<div class="br"><h3>'+esc(t)+'</h3><ul>';
+  items.forEach(it=>{h+="<li>"+rd(it)+"</li>"});
+  h+="</ul></div>"});
+ s.innerHTML=h+"</div>";rooms.appendChild(s)});
+let cur=0;
+const cells=()=>[...rooms.children[cur].querySelectorAll("input.bl")];
+function go(i){cur=(i+R.length)%R.length;[...tabs.children].forEach((t,k)=>t.classList.toggle("on",k==cur));[...rooms.children].forEach((s,k)=>s.classList.toggle("on",k==cur));document.getElementById("score").textContent="";scrollTo(0,0)}
+function check(){let ok=0;const c=cells();c.forEach(x=>{x.classList.remove("ok","bad","rev");if(!x.value.trim())return;const good=x.dataset.a.split("|").some(a=>norm(a)==norm(x.value));x.classList.add(good?"ok":"bad");if(good)ok++});document.getElementById("score").textContent="Đúng "+ok+"/"+c.length+" ô"}
+document.getElementById("chk").onclick=check;
+document.getElementById("rvl").onclick=()=>{cells().forEach(x=>{x.value=x.dataset.a.split("|")[0];x.classList.remove("ok","bad");x.classList.add("rev")});document.getElementById("score").textContent="Đã hiện đáp án"};
+document.getElementById("rst").onclick=()=>{cells().forEach(x=>{x.value="";x.classList.remove("ok","bad","rev")});document.getElementById("score").textContent=""};
+document.getElementById("prv").onclick=()=>go(cur-1);
+document.getElementById("nxt").onclick=()=>go(cur+1);
+document.getElementById("pre").onclick=()=>{document.body.classList.toggle("pres");try{if(document.body.classList.contains("pres"))document.documentElement.requestFullscreen&&document.documentElement.requestFullscreen();else document.fullscreenElement&&document.exitFullscreen()}catch(e){}};
+addEventListener("keydown",e=>{if(e.target.tagName=="INPUT")return;if(e.key=="ArrowRight")go(cur+1);if(e.key=="ArrowLeft")go(cur-1)});
+rooms.addEventListener("keydown",e=>{if(e.key=="Enter"&&e.target.tagName=="INPUT"){const c=cells(),i=c.indexOf(e.target);(c[i+1]||c[0]).focus()}});
+go(0);
+const $=id=>document.getElementById(id);
+let T=null,G=null,S={},tick=null,left=0,mode="home";
+const hs=s=>{let h=5381;for(const c of s.trim().toLowerCase())h=((h<<5)+h+c.charCodeAt(0))>>>0;return h.toString(36)};
+const enc=o=>"TD10-"+btoa(unescape(encodeURIComponent(JSON.stringify(o))));
+const dec=s=>JSON.parse(decodeURIComponent(escape(atob(s.replace(/\s/g,"").replace(/^TD10-/,"")))));
+const ans=r=>[...rooms.children[r].querySelectorAll("input.bl")].map(x=>x.value);
+const setAns=(r,a)=>rooms.children[r].querySelectorAll("input.bl").forEach((x,i)=>{x.value=a[i]||"";x.classList.remove("ok","bad","rev")});
+const hm=t=>new Date(t).toLocaleTimeString("vi-VN",{hour:"2-digit",minute:"2-digit"});
+function show(m){mode=m;["home","teacher","group","free"].forEach(k=>document.body.classList.toggle("m-"+k,k==m));if(m!="group")document.body.classList.remove("joined");["home","teacher","group"].forEach(k=>$(k).hidden=k!=m);document.body.classList.remove("pres");scrollTo(0,0)}
+document.querySelectorAll("[data-m]").forEach(b=>b.onclick=()=>show(b.dataset.m));
+document.querySelectorAll("[data-home]").forEach(b=>b.onclick=()=>show("home"));
+document.addEventListener("fullscreenchange",()=>{if(!document.fullscreenElement)document.body.classList.remove("pres")});
+// Giáo viên
+const paint=()=>{$("clock").textContent=left>0?String(Math.floor(left/60)).padStart(2,"0")+":"+String(left%60).padStart(2,"0"):"Hết giờ!"};
+$("tcreate").onclick=()=>{if(!$("tp").value.trim()){$("tp").focus();return}T={pw:$("tp").value,name:$("tn").value.trim()||"Lớp",mins:Math.max(1,+$("tm").value||10)};S={};left=T.mins*60;paint();$("tsetup").hidden=true;$("tmain").hidden=false;$("tinfo").innerHTML="<b>"+esc(T.name)+"</b> · Mật khẩu lớp: <b>"+esc(T.pw)+"</b> · Giao 5 phòng cho 5 nhóm, mỗi nhóm một phòng.";renderList()};
+$("tstart").onclick=()=>{if(tick){clearInterval(tick);tick=null;$("tstart").textContent="▶ Tiếp tục";return}if(left<=0){left=T.mins*60}$("tstart").textContent="⏸ Tạm dừng";tick=setInterval(()=>{left--;paint();if(left<=0){clearInterval(tick);tick=null;$("tstart").textContent="↺ Đặt lại"}},1000)};
+function renderList(){let h="<tr><th>Phòng</th><th>Nhóm</th><th>Nộp lúc</th><th>Đã điền</th><th></th></tr>";R.forEach((r,i)=>{const d=S[i];h+="<tr><td>"+(i+1)+". "+esc(r.n)+"</td>"+(d?"<td>"+esc(d.g)+"</td><td>"+hm(d.ts)+"</td><td>"+d.a.filter(x=>x.trim()).length+"/"+d.a.length+'</td><td><button class="b pri" data-o="'+i+'">Xem &amp; sửa</button></td>':"<td colspan=3 style='color:var(--mut)'>Chưa nộp</td><td></td>")+"</tr>"});$("tlist").innerHTML=h}
+$("tlist").onclick=e=>{if(e.target.dataset.o==null)return;const r=+e.target.dataset.o;setAns(r,S[r].a);go(r);check();rooms.scrollIntoView({behavior:"smooth"})};
+$("tadd").onclick=()=>{let ok=0,bad=0;$("tin").value.split(/\n+/).filter(x=>x.trim()).forEach(l=>{try{const d=dec(l);if(d.c!=hs(T.pw)||!(d.r>=0&&d.r<5))throw 0;if(!S[d.r]||S[d.r].ts<d.ts)S[d.r]=d;ok++}catch(e){bad++}});$("tmsg").textContent="Đã nhận "+ok+" bài"+(bad?"; "+bad+" mã không hợp lệ hoặc sai mật khẩu lớp":"");$("tin").value="";renderList()};
+// Nhóm học sinh
+R.forEach((r,i)=>$("gr").add(new Option("Phòng "+(i+1)+" – "+r.n,i)));
+const gkey=()=>"td10:"+hs(G.pw)+":"+hs(G.name)+":"+G.r;
+const gsave=()=>{try{localStorage.setItem(gkey(),JSON.stringify(ans(G.r)))}catch(e){}};
+$("gstart").onclick=()=>{const pw=$("gp").value.trim(),n=$("gn").value.trim();if(!pw||!n){$("gmsg0").textContent="Nhập mật khẩu lớp và tên nhóm";return}G={pw,name:n,r:+$("gr").value};let a=[];try{a=JSON.parse(localStorage.getItem(gkey()))||[]}catch(e){}setAns(G.r,a);document.body.classList.add("joined");$("gsetup").hidden=true;$("gmain").hidden=false;$("ginfo").textContent=n+" · Phòng "+(G.r+1);go(G.r)};
+rooms.addEventListener("input",()=>{if(mode=="group"&&G)gsave()});
+$("gsave").onclick=()=>{gsave();$("gmsg").textContent="Đã lưu nháp lúc "+hm(Date.now())};
+$("gsub").onclick=()=>{gsave();const t=Date.now();$("gout").value=enc({v:1,c:hs(G.pw),r:G.r,g:G.name,a:ans(G.r),ts:t});$("gbox").hidden=false;$("gmsg").textContent="Đã nộp lúc "+hm(t)+" – hãy gửi mã bên dưới cho giáo viên"};
+$("gcopy").onclick=()=>{const o=$("gout");o.select();try{navigator.clipboard.writeText(o.value)}catch(e){document.execCommand("copy")}$("gmsg").textContent="Đã sao chép mã"};
+let last=null;
+const SY=["²","³","√","½","π","∈","∉","∅","⊂","∩","∪","≤","≥","≠","⇒","⇔","∀","∃","ℕ","ℤ","ℚ","ℝ","∞","⊥","Δ","α","°","·","−","₁","₂","₃"];
+SY.forEach(c=>{const b=document.createElement("button");b.type="button";b.textContent=c;b.onmousedown=b.onpointerdown=e=>e.preventDefault();b.onclick=()=>{if(!last)return;const i=last.selectionStart??last.value.length,j=last.selectionEnd??i;last.setRangeText(c,i,j,"end");last.dispatchEvent(new Event("input",{bubbles:true}));last.focus()};$("kp").appendChild(b)});
+const AR=[[/<=>/g,"⇔"],[/=>/g,"⇒"],[/<=/g,"≤"],[/>=/g,"≥"],[/!=/g,"≠"],[/\^2/g,"²"],[/\^3/g,"³"],[/sqrt/gi,"√"]];
+rooms.addEventListener("input",e=>{const t=e.target;if(!t.classList.contains("bl"))return;let v=t.value;AR.forEach(([a,b])=>v=v.replace(a,b));if(v!=t.value){t.value=v;try{t.setSelectionRange(v.length,v.length)}catch(x){}}t.size=Math.max(+t.dataset.s||4,v.length+1);if(mode=="group"&&G)gsave()});
+rooms.addEventListener("focusin",e=>{if(e.target.classList.contains("bl"))last=e.target});
+show("home");
+</script>
+</body>
+</html>
